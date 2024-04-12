@@ -1,5 +1,24 @@
 #include <iostream>
 
+class C1 {
+    int x;
+ 
+public:
+    C1() 
+    { 
+      std::cout << "C1's constructor called " << std::endl; 
+    }
+};
+ 
+class C2 {
+    static C1 a;
+ 
+public:
+    C2() 
+    { 
+        std::cout << "C2's constructor called " << std::endl; 
+    }
+};
 
 class myclass
 {
@@ -10,11 +29,14 @@ class myclass
      not defined. They must be explicitly defined outside the class using the scope resolution operator.*/
 
     //myclass() = default; //default constructot, Not user-provided
-    myclass() {} //user-provided
+    myclass() {
+              std::cout << "myclass is constructed" << std::endl; 
+    } //user-provided
 
     private:
     int private_int;
-
+    
+    C2 x;
 };
 
 int myclass::T3 = 3;
@@ -30,6 +52,7 @@ int main()
     //std::cout<<"T3: "<<e::T3<<std::endl;  //error, must be the class
 
     
+    C1 x;
 
 
     return 0;
