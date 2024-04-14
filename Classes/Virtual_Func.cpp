@@ -49,7 +49,7 @@ int main()
 	base = &child;
 
 	// This will call the virtual function
-	base->display();
+	base->GFG_Base::display();
 
 	// this will call the non-virtual function
 	base->print();
