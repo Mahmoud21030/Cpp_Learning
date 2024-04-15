@@ -138,7 +138,7 @@
 // {
 //     cout << Test::getX() << " ";
 //     Test t[5];
-//     cout << Test::getX();
+//     cout << t[0].getX();
 // }
 // #include<iostream>
 // using namespace std;
@@ -148,7 +148,7 @@
 //     int x = 2;
 //     {
 //         int x = 3;
-//         cout << x << endl;
+//         cout << ::x << endl;
 //     }
 //     return 0;
 // }
@@ -185,6 +185,7 @@
 //     return 0;
 // }
 
+/************************************************************************************/
 // #include <iostream>
 // using namespace std;
 
@@ -208,6 +209,9 @@
 //     cout << p3.getID();
 //     return 0;
 // }
+
+/***********************************************************************************/
+
 // #include <iostream>
 // class Test
 // {
@@ -223,24 +227,24 @@
 //     Test::fun();
 //     return 0;
 // }
-#include <iostream>
-using namespace std;
-class A{
-public:
-    A(){
-        cout<<"Constructor called\n";
-    }
-    ~A(){
-        cout<<"Destructor called\n";
-    }
-};
+// #include <iostream>
+// using namespace std;
+// class A{
+// public:
+//     A(){
+//         cout<<"Constructor called\n";
+//     }
+//     ~A(){
+//         cout<<"Destructor called\n";
+//     }
+// };
 
-int main(int argc, char const *argv[])
-{
-    A *a = new A[5];
-    delete a;
-    return 0;
-}
+// int main(int argc, char const *argv[])
+// {
+//     A *a = new A[5];
+//     delete a;
+//     return 0;
+// }
 
 
 

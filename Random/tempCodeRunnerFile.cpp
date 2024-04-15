@@ -1,2 +1,0 @@
-
-    cout << Test::getX();
